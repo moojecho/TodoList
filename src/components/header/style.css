@@ -1,0 +1,18 @@
+.head-line1{
+    background-color: aliceblue;
+    display: flex;
+    border: 1px solid whitesmoke;
+    border-radius: 15px;
+    font-weight: bold;
+
+}
+
+#left-text{
+    margin-left: 15px;
+    position: fixed;
+}
+
+#right-text{
+    margin-left: 95%;
+    position: static;
+}
