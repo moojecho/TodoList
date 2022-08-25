@@ -1,53 +1,16 @@
-     .head-text{
-        font-size: 25px;
-        font-weight: bold;
-        display: flex;
-        margin-top: 5px;
-    }
-    
-    
-    .list-box{
-        width: 300px;
-        height: 180px;
-        border:5px solid darkcyan;
-        border-radius: 10px;
-        padding-left: 20px;
-        margin-bottom: 20px;
-        flex-direction: row;
-        
-    }
-
-    
-    .list-box-form{
-        display: flex;
-        flex-direction: column;
-        
-    }
-    
-    
-    button{
-        width: 120px;
-        height: 40px;
-        background-color: white;
-        margin-top: 12px;
-    }
+     .link-box{
+        margin-top: 11px;   
+     }
     
     .list-button-left{
         border:2px solid green;
         border-radius: 8px;
         font-weight: bold;
+        width: 120px;
+        height: 40px;
+        background-color: white;
+        margin-top: 1px;
     }
     
-    .list-button-right{
-        border:2px solid red;
-        border-radius: 8px;
-        margin-left: 18px;
-        font-weight: bold;
-    }
     
-    .list-button-left:hover{
-        background-color: green;
-    }
-    .list-button-right:hover{
-        background-color: red;
-    }
+    

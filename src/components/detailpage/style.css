@@ -1,0 +1,32 @@
+.detailpage-box-form{
+    margin: auto;
+    margin-top: 22%;
+    border: 1px solid #d3d3d3;
+    border-radius: 50px;
+    width: 600px;
+    height: 400px;
+} 
+
+.detailbox-head{
+    margin: 20px 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.detailpage-button{
+    width: 100px;
+    height: 50px;
+    margin-top: 6px;
+    margin-left: 70%;
+    border: 1px solid #d3d3d3;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.detailbox-cotents{
+    margin: 60px 32px;
+}
+
+.detailpage-button:hover{
+    background-color: thistle;
+}

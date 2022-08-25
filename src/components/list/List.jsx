@@ -1,16 +1,21 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import "./style.css";
+import {useSelector} from "react-redux";
 
-function List({list,removeList,clearList}) {
+function List({removeList,clearList,moveListPage}) {
    
-   
-  
- const my_list = list;
+const my_list = useSelector((state) => state.todo.list); 
+
 
 const list_all = my_list.map(list => {
   return (
        
         <div className="list-box" key={list.id}>
+          <div className="link-box">
+            <Link to={`/id:${list.id}`}  style={{textDecorationLine:"none"}} onClick={()=>moveListPage(list.id)}>상세보기</Link>
+          </div>
+          
           <h2>{list.title}</h2>
           <p>
           {list.contents}
@@ -63,3 +68,6 @@ function List(props) {
 }
 
 */
+
+
+

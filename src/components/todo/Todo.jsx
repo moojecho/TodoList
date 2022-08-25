@@ -1,14 +1,19 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import "./style.css";
+import {useSelector} from "react-redux";
 
-function Todo({list,removeTodoList,cancelList}) {
+function Todo({removeTodoList,cancelList,moveTodoPage}) {
  
-  const my_list = list;
-
+  const my_Done = useSelector((state) => state.after.list); 
+ 
   
-  const list_all = my_list.map(list => {
+  const list_all = my_Done.map(list => {
     return (
           <div className="list-box" key={list.id}>
+            <div className="link-box">
+            <Link to={`/id:${list.id}`}  style={{textDecorationLine:"none"}} onClick={()=>moveTodoPage(list.id)}>상세보기</Link>
+          </div>
             <h2>{list.title}</h2>
             <p>
             {list.contents}

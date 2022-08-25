@@ -1,64 +1,34 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
-
-import DetailPage from './components/detailpage/DetailPage';
-import Pages from "./pages/page"
-
-function App() {
-
-  return (
-    <div className="List-Form">
-      <Routes>
-        <Route path="/" element={<Pages/>}/>
-        <Route path="/:id" element={<DetailPage/>}/>
-      </Routes>
-      
-    </div>
-  );
-}
-
-export default App;
-
-
-
-
-
-
-
-/*
-
-
-
-import React from 'react';
-import { Route, Routes } from "react-router-dom";
-import Header from './components/header/Header';
-import Layout from './components/layout/Layout';
-import List from './components/list/List';
-import Todo from './components/todo/Todo';
-import DetailPage from './components/detailpage/DetailPage';
+import Header from '../components/header/Header';
+import Layout from '../components/layout/Layout';
+import List from '../components/list/List';
+import Todo from '../components/todo/Todo';
+import DetailPage from '../components/detailpage/DetailPage';
 
 //import page from "./pages/page"
 import { useDispatch,useSelector } from "react-redux";
 
 
-import { createList } from "./redux/modules/todo";
-import { remove_List } from "./redux/modules/todo";
-import { add_List } from "./redux/modules/todo";
+import { createList } from "../redux/modules/todo";
+import { remove_List } from "../redux/modules/todo";
+import { add_List } from "../redux/modules/todo";
 
-import { remove_Done } from "./redux/modules/after";
-import { clear_List } from "./redux/modules/after";
-import { cancleDone } from "./redux/modules/after";
+import { remove_Done } from "../redux/modules/after";
+import { clear_List } from "../redux/modules/after";
+import { cancleDone } from "../redux/modules/after";
 
-import { detail_List } from "./redux/modules/detail";
-import { detail_Todo } from "./redux/modules/detail";
+import { detail_List } from "../redux/modules/detail";
+import { detail_Todo } from "../redux/modules/detail";
 
 
-function App() {
+function Pages() {
 
   const my_list = useSelector((state) => state.todo.list);
   const my_Done = useSelector((state) => state.after.list);
 
   const dispatch = useDispatch();
+
 
 
   // list.jsx 관련 코드
@@ -68,12 +38,12 @@ function App() {
   };
 
   const clearList = (id) => {
-    const removeList = my_list.filter(List => { return List.id !== id; });
+    const removeList = my_list.filter(List => { return List.id !== id;});
     dispatch(remove_List(removeList));
 
     const newClearList = my_Done.concat(my_list.find(list => { return list.id == id; }));
     dispatch(clear_List(newClearList));
-    console.log(my_list.find(list => { return list.id == id; }))
+    console.log(my_list.find(list => { return list.isdone == false; }))
   };
 
   
@@ -112,6 +82,7 @@ function App() {
     dispatch(detail_List(newDetailList));
   }
 
+  
   const moveTodoPage = (id) => {
     const newDetailList = my_Done.filter(list => { return list.id == id; });
     dispatch(detail_Todo(newDetailList));
@@ -120,14 +91,9 @@ function App() {
 
 
 
-
   return (
     <div className="List-Form">
-      <Routes>
-        <Route path="/" element={<Header/>}/>
-        <Route path="/:id" element={<DetailPage moveListPage={moveListPage} />}/>
-      </Routes>
-      
+         <Header/>
         <Layout AddList={AddList} />
         <List removeList={removeList} clearList={clearList}
           moveListPage={moveListPage} />
@@ -141,11 +107,7 @@ function App() {
   );
 }
 
-export default App;   */
-
-
-
-
+export default Pages;
 
 
 

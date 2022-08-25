@@ -13,6 +13,10 @@ margin: auto;
     margin-top: 5px;
 }
 
+h2{
+    margin-top: 5px;
+}
+
 .list-wrapper{
 display: flex;
 flex-wrap: wrap;
@@ -37,12 +41,7 @@ flex-wrap: wrap;
 }
 
 
-button{
-    width: 120px;
-    height: 40px;
-    background-color: white;
-    margin-top: 12px;
-}
+
 
 .list-box-form{
     display: flex;
@@ -55,6 +54,10 @@ button{
     border:2px solid orange;
     border-radius: 8px;
     font-weight: bold;
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    margin-top: 1px;
 }
 
 .list-button-right{
@@ -62,11 +65,20 @@ button{
     border-radius: 8px;
     margin-left: 18px;
     font-weight: bold;
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    margin-top: 1px;
 }
 
 .list-button-left:hover{
     background-color: green;
 }
+
+.todo-list-button-left:hover{
+    background-color: goldenrod;
+}
+
 .list-button-right:hover{
     background-color: red;
 }
